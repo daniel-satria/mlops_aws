@@ -67,3 +67,4 @@ for file_name, partition_name in datasets:
         boto3.Session().resource('s3').Bucket(args['S3_OUTPUT_BUCKET']).Object(os.path.join(args['S3_OUTPUT_KEY_PREFIX'], 'training', file_name+'.csv')).upload_file(file_name+'.csv')
 
 print("Done writing to S3 ...\n")
+print("Success.")
